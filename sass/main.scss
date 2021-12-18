@@ -1,9 +1,11 @@
 @import './base/normalize';
 @import './utils/variables';
 @import './base/reset';
+@import './utils/breakpoints';
 @import './utils/utils';
 @import './utils/placeholder';
 @import './utils/mixins';
+@import './layout/container';
 
 @import './layout/logo';
 
