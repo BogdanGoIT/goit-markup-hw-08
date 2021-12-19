@@ -271,6 +271,7 @@ summary {
   --acent-color: #2196f3;
   --white-color: #ffffff;
   --secondary-color-fon: #2f303a;
+  --main-section-color: #f5f4fa;
   --indent-set-gup: 30px;
   --cubic-bazier: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -332,7 +333,7 @@ img {
   }
 }
 
-.doing-work__title, .development-team__title {
+.doing-work__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -348,7 +349,7 @@ img {
 }
 
 .header-container,
-.header-nav, .site-nav, .header-contacts, .feature-list__icon, .doing-work__list, .doing-work__text, .development-team__list, .clients-list, .clients-list__link, .social-network, .social-network__link, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
+.header-nav, .site-nav, .header-contacts, .feature-list__icon, .doing-work__list, .doing-work__text, .clients-list, .clients-list__link, .social-network, .social-networklink, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
   display: flex;
 }
 
@@ -591,7 +592,7 @@ img {
   align-items: center;
   height: 120px;
   margin-bottom: 30px;
-  background-color: #f5f4fa;
+  background-color: var(--main-section-color);
   border-radius: 4px;
 }
 
@@ -644,27 +645,59 @@ img {
 }
 
 /* Команда разработчиков */
-.development-team {
-  background: #f5f4fa;
+.command {
+  background-color: var(--main-section-color);
 }
 
-.development-team__item:nth-child(n + 2) {
-  margin-left: 30px;
+.command-list {
+  margin-bottom: -30px;
 }
 
-.development-team__item {
+.command-list__img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .command-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.command-list__item {
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .command-list__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command-list__item {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
+
+.command-content {
+  padding-top: 30px;
+  padding-bottom: 24px;
   text-align: center;
 }
 
-.development-team__content {
-  padding-top: 30px;
-  margin-bottom: 16px;
+@media screen and (min-width: 1200px) {
+  .command-content {
+    padding-bottom: 30px;
+  }
 }
 
-.development-team__name {
+.command__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -672,21 +705,22 @@ img {
   margin-bottom: 10px;
 }
 
-.development-team__skills {
+.command__skills {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+  margin-bottom: 16px;
 }
 
 /* Постоянные клиенты clients */
-.clients__title {
+.clients__title, .command__title {
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 1200px) {
-  .clients__title {
+  .clients__title, .command__title {
     margin-bottom: 50px;
   }
 }
@@ -738,17 +772,15 @@ img {
 }
 
 .social-network {
-  width: 206px;
-  height: 44px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-network__item + .social-network__item {
   margin-left: 10px;
 }
 
-.social-network__link {
+.social-networklink {
   align-items: center;
   justify-content: center;
   width: 44px;
@@ -758,17 +790,17 @@ img {
   transition: fill 250ms var(--cubic-bazier), background-color 250ms var(--cubic-bazier);
 }
 
-.social-network__link:hover, .social-network__link:focus {
+.social-networklink:hover, .social-networklink:focus {
   fill: var(--white-color);
   background-color: var(--acent-color);
 }
 
-.social-network__svg {
+.social-network__icon {
   width: 20px;
   height: 20px;
 }
 
-.social-network__link--grey {
+.social-networklink--grey {
   background: rgba(255, 255, 255, 0.1);
   fill: var(--white-color);
 }
