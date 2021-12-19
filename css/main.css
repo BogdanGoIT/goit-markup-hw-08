@@ -333,14 +333,6 @@ img {
   }
 }
 
-.doing-work__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .footer-join__title, .footer-subscribe__title {
   margin-bottom: 20px;
   line-height: 1.14;
@@ -349,7 +341,7 @@ img {
 }
 
 .header-container,
-.header-nav, .site-nav, .header-contacts, .feature-list__icon, .doing-work__list, .doing-work__text, .clients-list, .clients-list__link, .social-network, .social-networklink, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
+.header-nav, .site-nav, .header-contacts, .feature-list__icon, .work-list, .work-annexes__text, .clients-list, .clients-list__link, .social-network, .social-networklink, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
   display: flex;
 }
 
@@ -617,19 +609,29 @@ img {
 }
 
 /* WORK */
-.doing-work {
+.work {
   padding-top: 0;
 }
 
-.doing-work__item:nth-child(n + 2) {
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
+}
+
+.work__title {
+  margin-bottom: 50px;
+}
+
+.work-list__item:nth-child(n + 2) {
   margin-left: 30px;
 }
 
-.doing-work__annexes {
+.work-annexes {
   position: relative;
 }
 
-.doing-work__text {
+.work-annexes__text {
   position: absolute;
   bottom: 0;
   left: 0;
