@@ -10,7 +10,7 @@
   }
 }
 
-.feature-list__item {
+.feature__item {
   margin-bottom: 30px;
 
   @media screen and (min-width: $tablet) {
@@ -23,7 +23,7 @@
   }
 }
 
-.feature-list__icon {
+.feature__icon {
   @extend %flex-item;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
   height: 70px;
 }
 
-.feature-list__title {
+.feature__title {
   @include font(700, 14px, 1.14);
 
   margin-bottom: 10px;
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-.feature-list__text {
+.feature__text {
   line-height: 1.71;
   color: var(--secondary-color);
 }
