@@ -341,7 +341,7 @@ img {
 }
 
 .header-container,
-.header-nav, .site-nav, .header-contacts, .feature-list__icon, .work-list, .work-annexes__text, .clients-list, .clients-list__link, .social-network, .social-networklink, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
+.header-nav, .site-nav, .header-contacts, .feature-list__icon, .work-list, .work-annexes__text, .clients-list, .clients__link, .social-network, .social-networklink, .footer-container, .join-social, .subscribe-form, .portfolio-filter, .portfolio-content, .modal-btn, .modal-form__policy, .modal-form__item-check {
   display: flex;
 }
 
@@ -774,25 +774,25 @@ img {
   margin-bottom: -30px;
 }
 
-.clients-list__item {
+.clients__item {
   flex-basis: calc(100% / 2 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
-  .clients-list__item {
+  .clients__item {
     flex-basis: calc(100% / 3 - 30px);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients-list__item {
+  .clients__item {
     flex-basis: calc(100% / 6 - 30px);
   }
 }
 
-.clients-list__link {
+.clients__link {
   padding-top: 15px;
   padding-bottom: 15px;
   align-items: center;
@@ -803,7 +803,7 @@ img {
   transition: color 250ms var(--cubic-bazier);
 }
 
-.clients-list__link:hover, .clients-list__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--acent-color);
   border: 1px solid var(--acent-color);
 }
