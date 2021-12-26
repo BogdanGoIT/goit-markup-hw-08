@@ -167,8 +167,29 @@
             <div class="container">
                 <h2 class="command__title title">Наша команда</h2>
                 <ul class="command-list list">
-                    <li class="command-list__item">
-                        <img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" height="260" class="command-list__img">
+                    <li class="command__item">
+                        <picture>
+                            <source srcset="
+                        ./images/igor.jpg 1x,
+                        ./images/igor2x.jpg 2x
+                        "
+                        media="(min-width:1200px)"
+                        >
+                        <source srcset="
+                        ./images/tab/igor-tab.jpg 1x,
+                        ./images/tab/igor-tab2x.jpg 2x
+                        "
+                        media="(min-width:768px)"
+                        >
+                        <source srcset="
+                        ./images/mob/igor-mob.jpg 1x,
+                        ./images/mob/igor-mob2x.jpg 2x
+                        "
+                        media="(min-width:320px)"
+                        >
+                        <img src="./images/igor2x.jpg" alt="Игорь Демьяненко" >
+                        </picture>
+
                         <div class="command-content">
                             <h3 class="command__name">Игорь Демьяненко</h3>
                             <p class="command__skills">Product Designer</p>
