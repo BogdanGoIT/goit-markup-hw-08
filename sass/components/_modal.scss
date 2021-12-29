@@ -12,6 +12,12 @@
 
   transition: opacity 500ms,
     visibility 500ms var(--cubic-bazier);
+
+  overflow-y: scroll;
+
+  @media screen and(max-width:767px) {
+    padding: 93px 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -27,19 +33,23 @@
 
 .modal {
   position: relative;
-  width: 528px;
-  min-height: 581px;
   padding: 40px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
 
   transform: scale(1) rotate(0);
   transition: transform 500ms;
-  transform: translate(-50%, -50%);
-
   background-color: var(--white-color);
+
+  @media screen and(min-width:$tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    width: 528px;
+  }
 }
 
 .modal-btn {
