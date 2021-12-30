@@ -7,19 +7,40 @@
 }
 
 .footer-container {
-  @extend %flex-item;
-  align-items: baseline;
+  @media screen and(min-width:$desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-contact-join {
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 
 .footer-contacts {
-  width: 231px;
+  @media screen and(min-width:$desktop) {
+    width: 231px;
+  }
+
+  @media screen and(max-width:1199px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-address__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-bottom: 9px;
   }
 }
 
