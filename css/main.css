@@ -1236,17 +1236,37 @@ img {
 
 /* Portfolio */
 /* Фильтра */
+.portfolio-filter_margin {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter_margin {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-filter_margin {
+    margin-bottom: 50px;
+  }
+}
+
 .portfolio-filter {
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-bottom: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter {
+    justify-content: center;
+  }
 }
 
 .portfolio-filter__item {
   margin-left: 8px;
-}
-
-.portfolio-filter :first-child {
-  margin-left: 0px;
+  margin-bottom: 15px;
 }
 
 .filter-btn:hover, .filter-btn:focus {
@@ -1256,9 +1276,11 @@ img {
 }
 
 /* Контент */
-.portfolio__container {
-  padding-left: 0;
-  padding-right: 0;
+@media screen and (min-width: 768px) {
+  .portfolio__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .portfolio-content {

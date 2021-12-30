@@ -21,49 +21,112 @@
     <!-- Шапка страницы -->
     <header class="header">
         <div class="container header-container">
-            <!-- логотип и навигация -->
+    
             <nav class="header-nav">
     
                 <a href="/" class="logo">
                     Web<span class="logo-header--color">Studio</span>
                 </a>
     
-                <ul class="site-nav list">
-                    <li class="site-nav__item">
-                        <a href="index.html" class="site-nav__link ">Студия</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a href="" class="site-nav__link">Контакты</a>
-                    </li>
-                </ul>
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="40" height="40" aria-label="открыть меню">
+                        <use class="menu-open" href="./images/sprite.svg#icon-menu_open"></use>
+                    </svg>
+                </button>
+    
+                <div class="site-container">
+    
+                    <ul class="site-nav list">
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link site-nav__link--active">Студия</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a href="" class="site-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header-contacts list">
+                        <li class="header-contacts__item">
+                            <a href="mailto:info@devstudio.com" class="header-contacts__link ">
+                                <svg class="header-icon__button width">
+                                    <use href="./images/sprite.svg#ico-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="header-contacts__item">
+                            <a href="tel:+380961111111" class="header-contacts__link">
+                                <svg class="header-icon__button height">
+                                    <use href="./images/sprite.svg#ico-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+    
+                </div>
+    
+                <div class="menu-container js-menu-container" id="mobile-menu">
+    
+                    <button type="button" class="menu-toggle js-close-menu" aria-expanded="false">
+                        <svg width="40" height="40" aria-label="закрыть меню">
+                            <use class="menu-close" href="./images/sprite.svg#icon-menu_close"></use>
+                        </svg>
+                    </button>
+    
+    
+                    <ul class="mobile-menu list">
+    
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link mobile-menu__link--active">Студия</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+    
+                    <div class="mobile-container">
+    
+                        <ul class="mobile-contacts list">
+    
+                            <li class="mobile-contacts__item">
+                                <a href="tel:+380961111111" class="mobile-contacts__link mobile-contacts__link--active">
+                                    +38 096 111 11 11
+                                </a>
+                            </li>
+                            <li class="mobile-contacts__item">
+                                <a href="mailto:info@devstudio.com" class="mobile-contacts__link ">
+                                    info@devstudio.com
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="mob-social list">
+                            <li class="mob-socail__item"><a class="mob-socail__link mob-socail__link--reset"
+                                    href="">Instagram</a></li>
+                            <li class="mob-socail__item"><a class="mob-socail__link" href="">Twitter</a></li>
+                            <li class="mob-socail__item"><a class="mob-socail__link" href="">Facebook</a></li>
+                            <li class="mob-socail__item"><a class="mob-socail__link" href="">LinkedIn</a></li>
+                        </ul>
+                    </div>
+    
+    
+    
+                </div>
+    
+    
     
             </nav>
     
-            <ul class="header-contacts list">
-                <li class="header-contacts__item">
-                    <a href="mailto:info@devstudio.com" class="header-contacts__link ">
-                        <svg class="header-icon__button">
-                            <use href="./images/sprite.svg#ico-envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="header-contacts__item">
-                    <a href="tel:+380961111111" class="header-contacts__link ">
-                        <svg class="header-icon__button">
-                            <use href="./images/sprite.svg#ico-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
     
         </div>
     
-        <div class="header-line__bottom"></div>
+        <div class="line-bottom"></div>
     </header>
 
     <!-- Тело -->
@@ -71,13 +134,15 @@
         <section class="section content">
             <div class="container portfolio__container">
                 <h1 hidden>Контент</h1>
-                <ul class="portfolio-filter list">
-                    <li class="portfolio-filter__item"><button type="button" class="filter-btn active">Все</button></li>
-                    <li class="portfolio-filter__item"><button type="button" class="filter-btn">Веб-сайты</button></li>
-                    <li class="portfolio-filter__item"><button type="button" class="filter-btn">Приложения</button></li>
-                    <li class="portfolio-filter__item"><button type="button" class="filter-btn">Дизайн</button></li>
-                    <li class="portfolio-filter__item"><button type="button" class="filter-btn">Маркетинг</button></li>
-                </ul>
+                <div class="portfolio-filter_margin">
+                    <ul class="portfolio-filter list">
+                        <li class="portfolio-filter__item"><button type="button" class="filter-btn active">Все</button></li>
+                        <li class="portfolio-filter__item"><button type="button" class="filter-btn">Веб-сайты</button></li>
+                        <li class="portfolio-filter__item"><button type="button" class="filter-btn">Приложения</button></li>
+                        <li class="portfolio-filter__item"><button type="button" class="filter-btn">Дизайн</button></li>
+                        <li class="portfolio-filter__item"><button type="button" class="filter-btn">Маркетинг</button></li>
+                    </ul>
+                </div>
                 <ul class="portfolio-content list">
                     <li class="portfolio-content__list">
                         <a href="" class="content-card">
@@ -218,7 +283,7 @@
     </main>
 
     <!-- Футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container footer-container">
             <div class="footer-contacts">
     
@@ -228,7 +293,7 @@
                     </a>
                 </div>
     
-                <!-- адрес, контакты -->
+               
                 <address>
                     <ul class="footer-address list">
                         <li class="footer-address__item">
@@ -249,7 +314,7 @@
                 </address>
             </div>
     
-            <!-- присоединяйтесь -->
+         
             <div class="footer-join">
                 <h4 class="footer-join__title">присоединяйтесь</h4>
                 <ul class="join-social list">
@@ -284,7 +349,7 @@
                 </ul>
             </div>
     
-            <!-- Подпишитесь -->
+            
             <div class="footer-subscribe">
                 <h4 class="footer-subscribe__title">Подпишитесь на рассылку</h4>
                 <form action="#" class="subscribe-form" autocomplete="off">
@@ -299,7 +364,12 @@
                 </form>
             </div>
         </div>
-    </footer>
+    </footer> -->
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 
