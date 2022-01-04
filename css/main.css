@@ -838,7 +838,12 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .feature__title {
+    text-align: center;
+  }
 }
 
 .feature__text {
@@ -1344,13 +1349,19 @@ img {
   left: 0;
   color: var(--white-color);
   background: rgba(33, 150, 243, 0.9);
-  padding: 77px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   transform: translateY(100%);
   transition: transform 250ms var(--cubic-bazier);
+  height: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .content-card__image-text {
+    padding: 77px 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1572,7 +1583,7 @@ img {
 
 .modal-form__check:checked + .modal-form__item-check {
   background-color: var(--acent-color);
-  border: none;
+  border-color: transparent;
 }
 
 .modal-form__check-icon {
